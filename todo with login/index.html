@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="login-page" class="page">
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Enter your email">
+            <button onclick="login()">Login</button>
+        </div>
+        <div id="home-page" class="page">
+            <h2>Welcome to the Todo App</h2>
+            <button onclick="logout()">Logout</button>
+            <div id="notes-section">
+                <h3>Your Notes</h3>
+                <div id="notes-list"></div>
+                <h3>Add a new note</h3>
+                <textarea id="note-content" placeholder="Enter your note here"></textarea>
+                <button onclick="submitNote()">Submit Note</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

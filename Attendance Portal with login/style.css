@@ -1,0 +1,175 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 2s ease-in-out;
+  width: 90%;
+  max-width: 1000px;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.form-container {
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="url"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #2575fc;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #6a11cb;
+}
+
+.attendance-list {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  animation: slideIn 0.5s ease-out;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.attendance-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.attendance-item img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.attendance-item .details {
+  flex-grow: 1;
+}
+
+.attendance-item .status {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.attendance-item .status.present {
+  background: #4caf50;
+}
+
+.attendance-item .status.absent {
+  background: #f44336;
+}
+
+.attendance-item .status.leave {
+  background: #ff9800;
+}
+
+#logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #ff4d4d;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#logout-button:hover {
+  background: #ff1a1a;
+}
+
+.attendance-summary {
+  margin-top: 20px;
+}

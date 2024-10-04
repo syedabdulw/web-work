@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Attendance Portal</h1>
+        </header>
+        <main>
+            <div class="form-container">
+                <form id="attendance-form">
+                    <div class="input-group">
+                        <label for="serial">S.No:</label>
+                        <input type="number" id="serial" name="serial" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="bio">Bio:</label>
+                        <textarea id="bio" name="bio" required></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label for="image">Image URL:</label>
+                        <input type="url" id="image" name="image" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="status">Status:</label>
+                        <select id="status" name="status" required>
+                            <option value="present">Present</option>
+                            <option value="absent">Absent</option>
+                            <option value="leave">Leave</option>
+                        </select>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="attendance-list">
+                <h2>Attendance Sheet</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Bio</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="list"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
